@@ -1,16 +1,17 @@
-# MoodTunes
-Project 4 - Capstone Project - "MoodTune: Visualizing and Predicting Moods Based on Music Listening Behavior"
+Compliance Statement for Spotify API Usage in ML Project
+Spotify API Compliance Statement
 
-Spotify API Usage & Compliance
+Our project strictly adheres to the Spotify Developer Terms and Policy, including the explicit restriction against using Spotify Content or data to train machine learning or artificial intelligence models.
 
-This project uses the Spotify Web API solely for the purpose of visualizing publicly available metadata related to music listening behavior (e.g., track titles, artists, audio feature scores such as valence and energy).
+Specifically:
 
-We strictly adhere to Spotify’s Developer Terms of Service and do not:
+All machine learning models used in this project are trained exclusively on publicly licensed or external music datasets and do not incorporate Spotify data for training or fine-tuning.
 
-Use Spotify content or metadata to train, fine-tune, or evaluate any machine learning or AI models.
+Spotify data accessed through the API is used only in real-time during runtime for model inference (prediction), visualization, and user interaction purposes.
 
-Ingest Spotify audio features or user-specific data into machine learning pipelines.
+We do not cache, store, bulk download, or redistribute Spotify data beyond what is necessary for immediate runtime processing.
 
-Store or redistribute any Spotify content outside of permitted API use.
+User authentication is performed via OAuth with explicit consent, and all personal data is handled with strict privacy considerations.
 
-All machine learning components of this project (e.g., mood prediction models) are trained exclusively on publicly available, properly licensed datasets (e.g., the DEAM dataset) and/or self-reported mood data, independent of Spotify content.
+This approach ensures full compliance with Spotify’s Developer Policy, protecting Spotify’s content and respecting user privacy.
+
