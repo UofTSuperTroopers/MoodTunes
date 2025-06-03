@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import requests
 import os
 from dotenv import load_dotenv
+import hashlib
 
 load_dotenv()
 
@@ -20,8 +21,6 @@ def callback():
     # Exchange the token for a session key from Last.fm
     # Build the API signature required by Last.fm (md5 of sorted params + secret)
     # Reference: https://www.last.fm/api/webauth
-
-    import hashlib
 
     # Parameters to sign
     params = {
@@ -44,9 +43,7 @@ def callback():
 
     print("Signature string:", signature_string)
     print("API Signature:", api_sig)
-    
-    print(resp.text)
-    
+        
     # Call Last.fm API to get session key
     resp = requests.get("https://ws.audioscrobbler.com/2.0/", params=params)
 

@@ -11,6 +11,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
+
+
 class AuthWindow(QWidget):
     def __init__(self):
         super().__init__()
