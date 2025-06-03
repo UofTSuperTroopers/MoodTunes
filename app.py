@@ -40,3 +40,6 @@ def callback():
         return f"🎉 Auth successful! User: {username}, Session Key: {key}"
     else:
         return f"❌ Auth failed: {data}", 500
+    
+if __name__ == '__main__':
+    app.run()
