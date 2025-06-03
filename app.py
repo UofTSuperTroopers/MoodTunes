@@ -37,10 +37,16 @@ def callback():
     # MD5 hash the signature string
     api_sig = hashlib.md5(signature_string.encode("utf-8")).hexdigest()
 
+
     # Build request params including api_sig
     params["api_sig"] = api_sig
     params["format"] = "json"
 
+    print("Signature string:", signature_string)
+    print("API Signature:", api_sig)
+    
+    print(resp.text)
+    
     # Call Last.fm API to get session key
     resp = requests.get("https://ws.audioscrobbler.com/2.0/", params=params)
 
