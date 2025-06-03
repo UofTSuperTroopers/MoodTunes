@@ -44,7 +44,11 @@ def callback():
     if 'session' in data:
         username = data['session']['name']
         key = data['session']['key']
-        return f"🎉 Auth successful! User: {username}, Session Key: {key}"
+        return {
+            'username': username,
+            'session_key': key
+        }
+    
     else:
         return f"❌ Auth failed: {data}", 500
     
