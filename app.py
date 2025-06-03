@@ -1,11 +1,18 @@
 from flask import Flask, request
 import hashlib
 import requests
+import os
+
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 
-API_KEY = 'e026618686410558ab6c7a1e41ddfc66'
-API_SECRET = 'aafe209ae6581602d9fd6b9cae85f2de'
+API_KEY = os.environ.get('LASTFM_API_KEY')
+API_SECRET = os.environ.get('LASTFM_API_SECRET')
+
 
 def generate_api_sig(params, secret):
     # Exclude 'format' from the signature generation
@@ -42,4 +49,5 @@ def callback():
         return f"❌ Auth failed: {data}", 500
     
 if __name__ == '__main__':
-    app.run()
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
