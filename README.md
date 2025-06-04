@@ -14,3 +14,5 @@ We do not cache, store, bulk download, or redistribute Spotify data beyond what 
 User authentication is performed via OAuth with explicit consent, and all personal data is handled with strict privacy considerations.
 
 This approach ensures full compliance with Spotify’s Developer Policy, protecting Spotify’s content and respecting user privacy.
+
+
