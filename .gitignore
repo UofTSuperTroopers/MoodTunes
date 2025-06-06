@@ -195,3 +195,5 @@ cython_debug/
 
 Group 3 - Project Proposal.docx
 /MillionSongSubset/merged.h5
+*.h5
+__pycache__/
