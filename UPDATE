@@ -1,0 +1,2 @@
+** We didn't end up being able to complete this project - after running a few different ML models our R^2 scores were in the 0.3 range, which wasn't accurate enough to continue with.
+We have pivoted to a project called TuneSense - link here - https://github.com/UofTSuperTroopers/TuneSense which will make song recommendations based on users past listening
